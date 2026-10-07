@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>สอนใช้งาน ผู้ช่วยสั่ง New SKU</title>
+<meta name="description" content="สอนใช้แอปผู้ช่วยสั่ง New SKU ทีละหน้าจอ ภาพจากแอปจริงพร้อมคำอธิบาย">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M8 1l7 7-7 7-7-7z%22 fill=%22%232a78d6%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&display=swap">
+<style>
+:root { --page: #1d2a33; --bar: #17252E; --ink: #F5F4EF; --muted: #9FB0BA; --accent: #7FB3F0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--page); color: var(--ink); font-family: 'IBM Plex Sans Thai', Tahoma, sans-serif; }
+header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px; padding: 10px 16px;
+  background: var(--bar); border-bottom: 1px solid #2c3d48; }
+header h1 { margin: 0; font-size: 17px; font-weight: 600; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+header a { color: var(--bar); background: var(--accent); text-decoration: none; font-size: 15px; font-weight: 600;
+  padding: 7px 14px; border-radius: 8px; white-space: nowrap; }
+header a.ghost { background: transparent; color: var(--accent); border: 1px solid #3b5566; }
+main { max-width: 1280px; margin: 0 auto; padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+.frame { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35); scroll-margin-top: 64px; }
+.frame > section { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0;
+  transform: scale(var(--s, .5)); overflow: hidden; }
+section * { box-sizing: border-box; }
+section h1, section h2, section h3, section p, section ul { margin: 0; }
+section p { line-height: 1.4; }
+section table { border-collapse: collapse; width: 100%; }
+section th, section td { padding: .35em .6em; text-align: left; border-bottom: 1px solid #C9D0CD; vertical-align: top; }
+section th { font-weight: 600; border-bottom: 2px solid #17252E; }
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 8px 16px 32px; }
+footer a { color: var(--accent); }
+.hint { display: none; margin: 0; padding: 10px 16px; background: #24343f; color: var(--ink); font-size: 15px; line-height: 1.5; }
+@media (max-width: 600px) { header a.ghost { display: none; } main { padding: 8px; gap: 10px; } .hint { display: block; } }
+@media (orientation: landscape) { .hint { display: none; } }
+</style>
+</head>
+<body>
+<header><h1>สอนใช้งาน ผู้ช่วยสั่ง New SKU · 19 หน้า</h1>
+<a class="ghost" href="../">ลองเดโม</a><a href="guide.pdf" download="สไลด์สอนการใช้งาน ผู้ช่วยสั่ง New SKU.pdf">ดาวน์โหลด PDF</a></header>
+<p class="hint">อ่านบนมือถือ: หมุนจอเป็นแนวนอนจะเห็นตัวหนังสือชัดขึ้น หรือกดดาวน์โหลด PDF แล้วซูมดู</p>
+<main>
+<div class="frame"><section id="cover" data-transition="fade" style="background:#17252E; color:#F5F4EF; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px; display:flex; flex-direction:column; justify-content:space-between">
+<p style="font-size:26px; font-weight:600; color:#7FB3F0; letter-spacing:2px">คู่มือแบบสไลด์ · 7 ตุลาคม 2569</p>
+<div style="display:flex; flex-direction:column; gap:32px">
+<h1 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:112px; font-weight:600; line-height:1.1">สอนใช้งาน<br>ผู้ช่วยสั่ง New SKU</h1>
+<p style="font-size:40px; line-height:1.45; color:#C9D4DA; width:1400px">ทีละหน้าจอ สำหรับผู้จัดการสาขา ส่วนกลาง และผู้ดูแลข้อมูล แต่ละหน้ามีภาพจากแอปจริง เลขบนภาพตรงกับคำอธิบายด้านข้าง</p>
+</div>
+<p style="font-size:26px; color:#9FB0BA">ภาพทุกหน้ามาจากแอปที่ติดตั้งจากชุดติดตั้ง ใช้ข้อมูลจำลอง 15 สาขา 5 จังหวัด ตัวเลขในภาพจึงไม่ใช่ยอดขายจริง</p>
+
+</section>
+</div>
+<div class="frame"><section id="tabs" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">ภาพรวม</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">แอปมี 6 แท็บ ใครใช้แท็บไหน</h2>
+<div style="height:24px"></div>
+<table style="font-size:26px; color:#17252E">
+<tr><th style="width:19%">แท็บ</th><th style="width:47%">ใช้ทำอะไร</th><th style="width:18%">ใครใช้</th><th style="width:16%">บ่อยแค่ไหน</th></tr>
+<tr><td><b>New SKU</b></td><td>ดูคำแนะนำสินค้าใหม่ของสาขา แล้วกดยืนยัน แก้จำนวน หรือไม่สั่ง</td><td>ผู้จัดการสาขา</td><td>ทุกเช้า</td></tr>
+<tr><td><b>Stock Focus</b></td><td>หมวดที่ห้ามขาด บทบาทของแต่ละหมวด หมวดที่ควรลดพื้นที่</td><td>ผู้จัดการสาขา</td><td>ก่อนจัดชั้น</td></tr>
+<tr><td><b>พื้นที่และลูกค้า</b></td><td>ลูกค้าของสาขาเป็นใคร ขายอะไรต่างจากสาขาอื่น</td><td>ผู้จัดการ ส่วนกลาง</td><td>เมื่ออยากรู้จักสาขา</td></tr>
+<tr><td><b>ลองสินค้าใหม่</b></td><td>กรอกสินค้าที่กำลังจะออก ดูว่าควรส่งสาขาไหน กี่ชิ้น</td><td>ส่วนกลาง จัดซื้อ</td><td>ก่อนปล่อยสินค้า</td></tr>
+<tr><td><b>ผลย้อนหลัง</b></td><td>ปรับคะแนนจากยอดขายจริง ดูผล Shadow mode</td><td>ผู้ดูแลข้อมูล</td><td>สัปดาห์ละครั้ง</td></tr>
+<tr><td><b>นำเข้าข้อมูลจริง</b></td><td>อัปโหลดไฟล์จาก POS แล้วสลับไปใช้ข้อมูลจริง</td><td>ผู้ดูแลข้อมูล</td><td>ทุกเช้า</td></tr>
+</table>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">02 · ลำดับหน้าในสไลด์ชุดนี้ตรงกับแท็บในแอปจากซ้ายไปขวา</p>
+
+</section>
+</div>
+<div class="frame"><section id="start" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">เริ่มต้น</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">เปิดแอปและเลือกสาขา</h2>
+<img src="img/start.png" alt="หัวแอป: ชื่อแอป ป้ายข้อมูลจำลอง วันที่ข้อมูล ช่องเลือกสาขา และแถบแท็บ 6 แท็บ" style="position:absolute; left:128px; top:248px; width:1088px; height:189px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:915px; top:249px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:111px; top:258px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:96px; top:312px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:20px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>เลือกสาขา</b> เลือกสาขาของคุณครั้งเดียว ระบบจำไว้ ทุกแท็บจะแสดงข้อมูลของสาขานี้</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ป้ายข้อมูล</b> สีเหลือง "ข้อมูลจำลอง" หรือสีเขียว "ข้อมูลจริง" และวันที่ของข้อมูลล่าสุด</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>แท็บ</b> 6 หน้าจอ กดสลับได้ตลอด</p></div>
+</div>
+<div style="position:absolute; left:128px; top:480px; width:1088px; display:flex; gap:24px">
+<div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:32px">
+<h3 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:32px; font-weight:600">ทุกครั้งที่ใช้งาน</h3>
+<p style="font-size:26px; line-height:1.5; color:#4B5A63">ดับเบิลคลิก <b>เปิดแอป.bat</b> รอสักครู่ เบราว์เซอร์จะเปิดหน้าแอปให้เอง (http://127.0.0.1:8000) เปิดหน้าต่างสีดำทิ้งไว้ตลอดที่ใช้ ปิดหน้าต่างนั้นเมื่อเลิกใช้</p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:32px">
+<h3 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:32px; font-weight:600">ครั้งแรกครั้งเดียว</h3>
+<p style="font-size:26px; line-height:1.5; color:#4B5A63">ดับเบิลคลิก <b>ติดตั้ง.bat</b> ใช้เวลา 2–5 นาที ต้องมี Python 3.11 ขึ้นไปและอินเทอร์เน็ต เปิดแอปครั้งแรกรอการ์ดประมาณ 1 นาที</p>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">03 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง</p>
+
+</section>
+</div>
+<div class="frame"><section id="feed" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บ New SKU</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">สินค้าใหม่ที่กำลังเข้าสาขานี้</h2>
+<img loading="lazy" src="img/feed.png" alt="แท็บ New SKU: ช่องหาด้วยบาร์โค้ด สรุปถ้าสั่งตามระบบ 3 ช่อง และการ์ดสินค้าใหม่แถวแรก" style="position:absolute; left:128px; top:248px; width:874px; height:672px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:96px; top:309px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:96px; top:395px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:140px; top:459px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:299px; top:486px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<div style="position:absolute; left:1058px; top:248px; width:734px; display:flex; flex-direction:column; gap:24px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>หาด้วยบาร์โค้ด</b> สแกนหรือพิมพ์บาร์โค้ด 13 หลักแล้วกด Enter ระบบเลื่อนไปที่การ์ดนั้นให้</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ถ้าสั่งตามระบบ</b> สาขานี้จะทิ้งของ ได้กำไร และมีสต็อกค้างต่างจากที่สั่งจริงเท่าไหร่ (นับ 28 วันแรกของสินค้าใหม่ที่ผ่านมา)</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>การ์ดสินค้าใหม่</b> 1 ใบต่อ 1 สินค้า ตัวที่เข้าร้านล่าสุดอยู่ก่อน วิธีอ่านอยู่หน้าถัดไป</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ทุกสาขา</b> ดูคำแนะนำของสินค้าตัวนี้ทุกสาขาเทียบกัน</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">04 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง (สาขา S01 ออฟฟิศสีลม)</p>
+
+</section>
+</div>
+<div class="frame"><section id="card" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บ New SKU</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">อ่านการ์ด 1 ใบ</h2>
+<img loading="lazy" src="img/card.png" alt="การ์ดทุเรียนฟรีซดราย: Test ลองก่อน Store Fit 56 แนะนำสั่ง 24 ชิ้น เหตุผล 3 ข้อ จุดวาง ผลหลังขาย 14 วัน และปุ่มยืนยัน แก้จำนวน ไม่สั่ง" style="position:absolute; left:128px; top:248px; width:401px; height:672px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:108px; top:266px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:121px; top:380px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:320px; top:324px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:423px; top:317px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:108px; top:467px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<p style="position:absolute; left:108px; top:644px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">6</p>
+<p style="position:absolute; left:108px; top:698px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">7</p>
+<p style="position:absolute; left:108px; top:752px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">8</p>
+<p style="position:absolute; left:108px; top:843px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">9</p>
+<div style="position:absolute; left:585px; top:248px; width:1207px; display:flex; gap:40px">
+<div style="flex:1; display:flex; flex-direction:column; gap:22px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ชื่อสินค้า</b> หมวด ราคา วันที่ของถึงสาขา และบาร์โค้ด</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>คำตอบ</b> <span style="color:#1E7B3C">Go</span> สั่งได้ · <span style="color:#8A5A00">Test</span> ลองสั่งน้อยก่อน · <span style="color:#5F676D">No-Go</span> ไม่แนะนำ</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>Store Fit</b> คะแนน 0–100 ว่าสินค้าเหมาะกับลูกค้าสาขานี้แค่ไหน 70 ขึ้นไปได้ Go 50–69 ได้ Test</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>แนะนำสั่ง</b> จำนวนต่อรอบส่ง สินค้าที่วางขายแล้วไม่เกิน 28 วันจะเป็น "สั่งวันนี้" ตามยอดขายจริง</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">5</p><p style="flex:1; font-size:26px; line-height:1.4"><b>เหตุผล 3 ข้อ</b> ตัวเลขมาจากยอดขายของสาขานี้เทียบกับสาขาอื่น</p></div>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:22px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">6</p><p style="flex:1; font-size:26px; line-height:1.4"><b>วางที่</b> จุดวางที่แนะนำในร้าน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">7</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ที่มาของคะแนน</b> กดเปิดดูคะแนนทีละเรื่อง และยอดที่คาดว่าจะขายได้ต่อวัน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">8</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ผลหลังขาย</b> ขายครบ 7 และ 14 วันแล้ว ระบบเทียบกับสาขาอื่น แล้วบอกว่าควรเพิ่ม ลด หรือหยุดสั่ง</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">9</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ปุ่มตัดสินใจ</b> ดูหน้าถัดไป</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:24px">
+<p style="font-size:24px; line-height:1.45; color:#4B5A63">ธง ⚑ บนการ์ด: "ยังไม่เคยขายของแนวนี้" ระบบเลยให้ลองน้อยก่อน · "คะแนนก้ำกึ่ง" บางสาขาได้ลองขายเพื่อเก็บข้อมูล</p>
+</div>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">05 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง</p>
+
+</section>
+</div>
+<div class="frame"><section id="decide" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บ New SKU</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">กดตัดสินใจให้ครบทุกการ์ด</h2>
+<img loading="lazy" src="img/decide.png" alt="ส่วนล่างของการ์ด 3 ใบ: ใบแรกมีปุ่มยืนยัน 24 ชิ้น แก้จำนวน ไม่สั่ง ใบที่สองมีปุ่มทดลอง 20 ชิ้น ใบที่สามขึ้นว่าบันทึกแล้ว 20 ชิ้น พร้อมปุ่มเปลี่ยน" style="position:absolute; left:128px; top:248px; width:1088px; height:227px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:154px; top:355px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:269px; top:355px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:610px; top:355px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:365px; top:355px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:874px; top:355px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<p style="position:absolute; left:1038px; top:355px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">6</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:12px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:32px">
+<h3 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:32px; font-weight:600">ทำไมต้องกดทุกใบ</h3>
+<p style="font-size:26px; line-height:1.45; color:#4B5A63">ทุกปุ่มที่กดถูกเก็บไว้ ระบบใช้ดูว่าคำแนะนำตรงกับที่ผู้จัดการคิดแค่ไหน และใช้วัดผลตอน pilot</p>
+</div>
+<div style="position:absolute; left:128px; top:520px; width:1664px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:28px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ยืนยัน</b> สั่งตามจำนวนที่แนะนำ</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>แก้จำนวน</b> ใส่จำนวนเองพร้อมเหตุผล ถ้ามากกว่าที่แนะนำมาก ระบบจะถามยืนยันอีกครั้ง</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ทดลอง</b> มีเฉพาะการ์ด No-Go ใช้เมื่ออยากลองขายจำนวนน้อยดูก่อน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ไม่สั่ง</b> เลือกเหตุผล เช่น ตู้แช่/ชั้นวางเต็ม หรือลูกค้าแถวนี้ไม่น่าซื้อ</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">5</p><p style="flex:1; font-size:26px; line-height:1.4"><b>บันทึกแล้ว</b> บอกจำนวนและเวลาที่กด รีเฟรชหน้าหรือเปิดแอปใหม่ก็ยังอยู่</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">6</p><p style="flex:1; font-size:26px; line-height:1.4"><b>เปลี่ยน</b> กดผิดก็กดเปลี่ยนแล้วเลือกใหม่ ระบบใช้ครั้งล่าสุด</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">06 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง</p>
+
+</section>
+</div>
+<div class="frame"><section id="scan" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บ New SKU</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">ของมาถึงร้าน สแกนบาร์โค้ดหาการ์ด</h2>
+<img loading="lazy" src="img/scan.png" alt="ช่องหาด้วยบาร์โค้ดที่สแกนแล้ว ข้อความว่าพบมักกะโรนีชีสเบคอน และการ์ดใบนั้นมีกรอบสีฟ้า" style="position:absolute; left:128px; top:248px; width:1088px; height:639px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:96px; top:350px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:96px; top:404px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:506px; top:542px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:22px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ช่องสแกน</b> ยิงเครื่องสแกนหรือพิมพ์ 13 หลักแล้วกด Enter สแกนตัวต่อไปได้เลย ไม่ต้องลบของเดิม</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ข้อความผล</b> บอกว่าพบสินค้าอะไร</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>การ์ดที่พบ</b> ระบบเลื่อนมาให้และทำกรอบสีฟ้าไว้ชั่วครู่</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:24px">
+<h3 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:28px; font-weight:600">ข้อความอื่นที่อาจเจอ</h3>
+<p style="font-size:24px; line-height:1.45; color:#4B5A63">"เป็นสินค้าเดิมของร้าน" ไม่ใช่สินค้าใหม่<br>"ไม่พบบาร์โค้ด" มีปุ่มพาไปกรอกเป็นสินค้าใหม่<br>"หลักสุดท้ายไม่ตรง" สแกนหรือพิมพ์ผิด ลองใหม่</p>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">07 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง สินค้าไทยมีบาร์โค้ดขึ้นต้นด้วย 885</p>
+
+</section>
+</div>
+<div class="frame"><section id="allstores" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บ New SKU · ปุ่มทุกสาขา</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">สินค้าตัวนี้เหมาะกับสาขาไหน</h2>
+<img loading="lazy" src="img/allstores.png" alt="หน้าต่างคำแนะนำทุกสาขาของทุเรียนฟรีซดราย: บาร์โค้ด แถวจังหวัดภูเก็ตพร้อมคะแนนเฉลี่ย และแถวสาขาที่มีคะแนน คำแนะนำ จำนวนสั่ง และเหตุผลหลัก" style="position:absolute; left:128px; top:248px; width:912px; height:672px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:102px; top:308px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:103px; top:411px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:103px; top:467px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:545px; top:462px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:830px; top:360px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<div style="position:absolute; left:1096px; top:248px; width:696px; display:flex; flex-direction:column; gap:24px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>บาร์โค้ด</b> ของสินค้าตัวนี้</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>แถวจังหวัด</b> คะแนนเฉลี่ยและจำนวนสาขาที่ได้ Go / Test / No-Go จังหวัดที่เหมาะที่สุดอยู่บนสุด</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>สาขาและคะแนน</b> ในจังหวัดเดียวกันเรียงคะแนนมากไปน้อย</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>คำแนะนำและจำนวน</b> จำนวนสั่งต่อรอบ การ์ด No-Go บอกจำนวนทดลองไว้ในวงเล็บ</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">5</p><p style="flex:1; font-size:26px; line-height:1.4"><b>เหตุผลหลัก</b> เหตุผลข้อแรกของสาขานั้น</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">08 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง กด Esc หรือคลิกนอกหน้าต่างเพื่อปิด</p>
+
+</section>
+</div>
+<div class="frame"><section id="focus" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บ Stock Focus</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">สาขานี้ควรเน้นสต็อกหมวดไหน</h2>
+<img loading="lazy" src="img/focus.png" alt="Stock Focus สาขาขอนแก่นหน้ามหาวิทยาลัย: สรุป 30 วัน ตารางหมวดที่ห้ามขาด และบทบาทของแต่ละหมวด 3 แบบ" style="position:absolute; left:128px; top:248px; width:657px; height:672px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:96px; top:288px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:96px; top:416px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:240px; top:572px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:455px; top:572px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:655px; top:572px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<p style="position:absolute; left:633px; top:695px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">6</p>
+<div style="position:absolute; left:841px; top:248px; width:951px; display:flex; flex-direction:column; gap:22px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>สรุป 30 วัน</b> เงินที่เสียไปเพราะของหมด ของที่ทิ้ง และจำนวนหมวดดึงลูกค้า</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>หมวดที่ห้ามขาด</b> หมวดที่ของหมดจนเสียเงินมากที่สุด (ไม่เกิน 5 หมวด เสียไม่ถึง 1,000 บาทไม่นับ) เติมให้เต็มก่อนเวลาที่บอก</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>หมวดดึงลูกค้า</b> ขายได้ดีกว่าสาขาอื่นชัดเจน ห้ามขาด ให้หน้าชั้นกว้างขึ้น รับสินค้าใหม่หมวดนี้ก่อน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>หมวดหลักประจำวัน</b> ขายพอๆ กับที่อื่นหรือยอดใหญ่ เติมให้ครบทุกวัน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">5</p><p style="flex:1; font-size:26px; line-height:1.4"><b>หมวดเสริม</b> ลูกค้าแถวนี้ซื้อน้อย เก็บไว้แต่ตัวที่ขายได้ ลดหน้าชั้นลง</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">6</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ป้ายเตือน</b> ⚠ ของเสียสูง (ทิ้งเกิน 5%) หรือ ⚠ ยอดแกว่ง ทั้งสองแบบให้สั่งทีละน้อยแต่บ่อยขึ้น</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">09 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง (สาขา S07 ขอนแก่น หน้ามหาวิทยาลัย)</p>
+
+</section>
+</div>
+<div class="frame"><section id="focus2" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บ Stock Focus</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">ย้ายพื้นที่ วันพิเศษ และตัวเลขทุกหมวด</h2>
+<img loading="lazy" src="img/focus2.png" alt="ส่วนล่างของ Stock Focus: กล่องย้ายพื้นที่ชั้นวางหรือตู้แช่ กล่อง 2 สัปดาห์ข้างหน้า และตารางทุกหมวด" style="position:absolute; left:128px; top:248px; width:790px; height:672px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:136px; top:240px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:526px; top:240px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:96px; top:455px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<div style="position:absolute; left:974px; top:248px; width:818px; display:flex; flex-direction:column; gap:24px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ย้ายพื้นที่ชั้นวาง/ตู้แช่</b> ลดหน้าชั้นหมวดเสริมที่ขายน้อย แล้วยกที่ให้หมวดที่ของขาด ย้ายในโซนเดียวกัน ตู้แช่ไปตู้แช่ ชั้นไปชั้น</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>2 สัปดาห์ข้างหน้า</b> วันพิเศษของจังหวัด เช่น ปิดเทอม เงินเดือนออก และหมวดที่ควรเตรียมเพิ่มหรือลด ×0.83 คือขายได้ 83% ของปกติ</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ทุกหมวด</b> ตัวเลขครบทุกหมวด ขายได้กี่เท่าของสาขาอื่น สัดส่วนในยอดร้าน ของทิ้ง ยอดขาย เงินที่เสียเพราะของหมด เวลาเติม และบทบาท</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:24px">
+<p style="font-size:24px; line-height:1.45; color:#4B5A63">หมวดที่อยู่ในรายการห้ามขาด ระบบจะไม่บอกให้ลดพื้นที่ แม้เป็นหมวดเสริม</p>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">10 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง (สาขา S07)</p>
+
+</section>
+</div>
+<div class="frame"><section id="area" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บพื้นที่และลูกค้า</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">ลูกค้าสาขานี้เป็นใคร ขายอะไรต่างจากที่อื่น</h2>
+<img loading="lazy" src="img/area.png" alt="พื้นที่และลูกค้าของสาขาขอนแก่นหน้ามหาวิทยาลัย: กรอบบอกขอบเขต สรุปสั้น กราฟกลุ่มลูกค้า และกราฟช่วงเวลาที่ขายดี" style="position:absolute; left:128px; top:248px; width:1075px; height:672px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:96px; top:323px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:109px; top:464px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:148px; top:630px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:678px; top:630px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<div style="position:absolute; left:1259px; top:248px; width:533px; display:flex; flex-direction:column; gap:24px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ขอบเขต</b> ข้อมูลของสาขาที่เลือกไว้มุมขวาบน เทียบกับสาขาอื่น</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>สรุปสั้น</b> ทำเล ลูกค้าส่วนใหญ่ หมวดที่ขายดีและขายน้อยกว่าที่อื่น แนวที่ชอบ และช่วงที่ขายดี</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ลูกค้าของสาขานี้</b> สัดส่วนแต่ละกลุ่ม ×1.4 คือมากกว่าสาขาอื่น 1.4 เท่า (แสดงเมื่อมีข้อมูลกลุ่มลูกค้า)</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ขายดีช่วงไหน</b> ยอดแต่ละช่วงของวัน ใช้วางแผนเวลาเติมของ</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">11 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง ดูจากยอด 56 วันล่าสุด</p>
+
+</section>
+</div>
+<div class="frame"><section id="area2" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บพื้นที่และลูกค้า</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">สินค้าเด่นของสาขา และเทียบทุกสาขา</h2>
+<img loading="lazy" src="img/area2.png" alt="ตารางสินค้าที่สาขานี้ขายดีกว่าสาขาอื่น ตารางสินค้าที่ขายได้น้อย และตารางเทียบทุกสาขาว่าหมวดไหนขายเก่งที่ไหน" style="position:absolute; left:128px; top:248px; width:645px; height:672px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:96px; top:241px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:96px; top:509px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:96px; top:784px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:96px; top:880px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<div style="position:absolute; left:829px; top:248px; width:963px; display:flex; flex-direction:column; gap:24px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ขายดีกว่าสาขาอื่น</b> สินค้าที่สาขานี้ขายต่อวันได้ 1.3 เท่าของสาขาอื่นขึ้นไป สินค้าใหม่ที่คล้ายรายการนี้มักได้คะแนนสูงที่สาขานี้</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ขายดีที่อื่น แต่ที่นี่ขายได้น้อย</b> สินค้าใหม่ที่คล้ายรายการนี้ควรสั่งน้อยก่อน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>เทียบทุกสาขา</b> ตารางหมวด × สาขา สีเข้มคือขายเก่งกว่าที่อื่น ตารางเดียวในแท็บนี้ที่ดูทุกสาขาพร้อมกัน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>แถวสาขา</b> กดแถวไหนก็เปลี่ยนไปดูสาขานั้น ทุกแท็บเปลี่ยนตาม ระบบมีข้อความบอก เปลี่ยนกลับได้ที่มุมขวาบน</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">12 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง ข้อมูลจริงต้องมีอย่างน้อย 2 สาขาถึงจะเทียบได้</p>
+
+</section>
+</div>
+<div class="frame"><section id="try" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บลองสินค้าใหม่</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">กรอกสินค้าที่กำลังจะออก</h2>
+<img loading="lazy" src="img/try.png" alt="ฟอร์มลองสินค้าใหม่ กรอกเบอร์เกอร์หมูพริกไทยดำ บาร์โค้ด 8859999000018 หมวดอาหารแช่เย็น ราคา 39 บาท อายุ 3 วัน คำบรรยายมื้อเช้า และปุ่มดูคำแนะนำทุกสาขา" style="position:absolute; left:128px; top:248px; width:1088px; height:581px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:109px; top:364px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:109px; top:438px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:627px; top:439px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:109px; top:536px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:627px; top:536px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<p style="position:absolute; left:109px; top:610px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">6</p>
+<p style="position:absolute; left:109px; top:689px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">7</p>
+<p style="position:absolute; left:308px; top:753px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">8</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:14px">
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">1</p><p style="flex:1; font-size:24px; line-height:1.4"><b>ชื่อสินค้า</b> ให้บอกลักษณะ เช่น "เบอร์เกอร์หมูพริกไทยดำ"</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">2</p><p style="flex:1; font-size:24px; line-height:1.4"><b>บาร์โค้ด</b> ไม่บังคับ ระบบตรวจว่าครบ 13 หลัก ถูกต้อง และไม่ซ้ำ</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">3</p><p style="flex:1; font-size:24px; line-height:1.4"><b>หมวด</b> เลือกหมวดของสินค้า</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">4</p><p style="flex:1; font-size:24px; line-height:1.4"><b>ราคาขาย</b> ระบบเทียบกับของในหมวดเดียวกัน</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">5</p><p style="flex:1; font-size:24px; line-height:1.4"><b>ต้นทุน</b> ไม่ใส่ก็ได้ ระบบสมมติกำไร 30%</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">6</p><p style="flex:1; font-size:24px; line-height:1.4"><b>อายุสินค้า</b> 5 วันลงมานับเป็นของสด จำนวนสั่งคิดเผื่อของเสีย</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">7</p><p style="flex:1; font-size:24px; line-height:1.4"><b>คำบรรยาย</b> รสชาติ มื้อ กลุ่มลูกค้า ช่วยให้ระบบรู้แนวสินค้า</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">8</p><p style="flex:1; font-size:24px; line-height:1.4"><b>ดูคำแนะนำทุกสาขา</b> ได้ผลในไม่กี่วินาที</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">13 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง บาร์โค้ดในภาพเป็นเลขตัวอย่าง</p>
+
+</section>
+</div>
+<div class="frame"><section id="try2" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บลองสินค้าใหม่</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">ผลที่ได้: ควรส่งสาขาไหน กี่ชิ้น</h2>
+<img loading="lazy" src="img/try2.png" alt="ผลของเบอร์เกอร์หมูพริกไทยดำ: สินค้าแนวมื้อเช้า ตารางทุกสาขาจัดกลุ่มตามจังหวัด สาขาออฟฟิศสีลมได้ Go" style="position:absolute; left:128px; top:248px; width:1088px; height:653px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:109px; top:338px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:96px; top:449px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:96px; top:503px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:448px; top:469px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:696px; top:469px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:22px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>แนวสินค้า</b> ระบบอ่านจากชื่อและคำบรรยาย ถ้าบอกแนวไม่ได้ ให้ใส่คำบรรยายเพิ่ม</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>จังหวัด</b> คะแนนเฉลี่ยและจำนวนสาขาที่ได้ Go / Test / No-Go</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>สาขา</b> คะแนน Store Fit ของแต่ละสาขา</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>คำแนะนำ</b> Go / Test / No-Go และจำนวนสั่งต่อรอบ</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">5</p><p style="flex:1; font-size:26px; line-height:1.4"><b>เหตุผลหลัก</b> เช่น ลูกค้าแถวนี้ซื้อของแนวมื้อเช้ามากกว่าสาขาอื่น</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:24px">
+<p style="font-size:24px; line-height:1.45; color:#4B5A63">สินค้าที่ลองกรอกจะขึ้นเป็นการ์ดในแท็บ New SKU ของทุกสาขาด้วย จนกว่าจะปิดแอป</p>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">14 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง</p>
+
+</section>
+</div>
+<div class="frame"><section id="results" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บผลย้อนหลัง</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">ปรับคะแนนทุกสัปดาห์ และดู Shadow mode</h2>
+<img loading="lazy" src="img/results.png" alt="แท็บผลย้อนหลัง: กล่องปรับคะแนนจากผลขายจริงพร้อมปุ่มปรับคะแนนตอนนี้ และกล่อง Shadow mode ที่มีตัวเลข 4 ช่อง" style="position:absolute; left:128px; top:248px; width:1088px; height:589px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:109px; top:442px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:109px; top:494px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:109px; top:583px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:109px; top:696px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:22px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>คาดยอดแม่นแค่ไหน</b> รายสาขา 1.0 คือตรง เกิน 1 คือคาดสูงไป สาขาที่คาดผิดบ่อยควรดูว่าต่างจากที่อื่นตรงไหน</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ปรับคะแนนตอนนี้</b> กดสัปดาห์ละครั้งหลังนำเข้ายอดขายใหม่ ใช้เวลา 1–3 นาที ทำอย่างอื่นรอได้</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>Shadow mode</b> ช่วงก่อน pilot ร้านสั่งแบบเดิม ระบบจดไว้ทุกวันว่าจะสั่งเท่าไหร่</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ตัวเลขเทียบ</b> วันที่ของหมด ขายเพิ่มได้ วันที่มีของทิ้ง และของบนชั้น ระบบเทียบกับที่ร้านสั่งจริง</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:24px">
+<p style="font-size:24px; line-height:1.45; color:#4B5A63">เลื่อนลงไปจะเจอตารางรายสาขา และปุ่มดาวน์โหลดบันทึก (CSV) ส่งให้ทีม</p>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">15 · ภาพจากแอปจริงที่ใช้ข้อมูลจำลอง</p>
+
+</section>
+</div>
+<div class="frame"><section id="import" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บนำเข้าข้อมูลจริง</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">นำเข้าไฟล์จาก POS</h2>
+<img loading="lazy" src="img/import.png" alt="แท็บนำเข้าข้อมูลจริง: รายการสถานะไฟล์ ปุ่มใช้ข้อมูลจริง ช่องเลือกตาราง ช่องเลือกไฟล์ CSV ปุ่มอ่านไฟล์ และปุ่มดาวน์โหลดหัวคอลัมน์ตัวอย่าง" style="position:absolute; left:128px; top:248px; width:1088px; height:479px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:109px; top:403px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:109px; top:478px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:109px; top:598px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:627px; top:597px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:109px; top:650px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<p style="position:absolute; left:451px; top:650px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">6</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:18px">
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">1</p><p style="flex:1; font-size:24px; line-height:1.4"><b>สถานะไฟล์</b> ✓ มีแล้ว · ✕ ยังขาด · ○ ไม่บังคับ</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">2</p><p style="flex:1; font-size:24px; line-height:1.4"><b>ใช้ข้อมูลจริง</b> กดได้เมื่อครบ 4 ไฟล์และไม่มี ERROR ระบบจำไว้แม้ปิดเปิดแอปใหม่</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">3</p><p style="flex:1; font-size:24px; line-height:1.4"><b>ตาราง</b> ไฟล์นี้คือสาขา สินค้า ยอดขายรายชั่วโมง หรือสต็อกรายวัน</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">4</p><p style="flex:1; font-size:24px; line-height:1.4"><b>ไฟล์ CSV</b> ภาษาไทยได้ทั้ง UTF-8 และ TIS-620 วันที่ พ.ศ. ก็ได้</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">5</p><p style="flex:1; font-size:24px; line-height:1.4"><b>อ่านไฟล์</b> ระบบเดาว่าแต่ละคอลัมน์คืออะไร (หน้าถัดไป)</p></div>
+<div style="display:flex; gap:14px"><p style="width:40px; height:40px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:40px; text-align:center">6</p><p style="flex:1; font-size:24px; line-height:1.4"><b>หัวคอลัมน์ตัวอย่าง</b> ดาวน์โหลดดูว่าระบบใช้คอลัมน์อะไร</p></div>
+<div style="display:flex; flex-direction:column; gap:8px; background:#FFFFFF; border:1px solid #D9DEDB; border-radius:16px; padding:22px">
+<p style="font-size:24px; line-height:1.45; color:#4B5A63">อยากลองก่อนใช้ไฟล์จริง ใช้ไฟล์ทดลองในโฟลเดอร์ data\sample_pos</p>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">16 · ภาพจากแอปจริง ยังไม่ได้นำเข้าไฟล์ใด</p>
+
+</section>
+</div>
+<div class="frame"><section id="import2" data-transition="fade" style="background:#F5F4EF; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แท็บนำเข้าข้อมูลจริง</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">ตรวจการจับคู่คอลัมน์ แล้วบันทึก</h2>
+<img loading="lazy" src="img/import2.png" alt="ตารางจับคู่คอลัมน์ของไฟล์สินค้า 340 แถว: ITEM_CODE เป็น sku_id BARCODE เป็น barcode ITEM_NAME เป็น name และปุ่มบันทึกและตรวจคุณภาพ" style="position:absolute; left:128px; top:248px; width:1088px; height:644px; object-fit:contain; background:#FFFFFF; border:1px solid #CFD6D3; border-radius:12px">
+<p style="position:absolute; left:110px; top:355px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">1</p>
+<p style="position:absolute; left:883px; top:360px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">2</p>
+<p style="position:absolute; left:1078px; top:420px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">3</p>
+<p style="position:absolute; left:109px; top:774px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">4</p>
+<p style="position:absolute; left:109px; top:828px; width:48px; height:48px; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:26px; font-weight:700; line-height:48px; text-align:center; box-shadow:0 0 0 3px #FFFFFF">5</p>
+<div style="position:absolute; left:1264px; top:248px; width:528px; display:flex; flex-direction:column; gap:20px">
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">1</p><p style="flex:1; font-size:26px; line-height:1.4"><b>คอลัมน์ในไฟล์</b> ชื่อตามระบบ POS ของร้าน พร้อมตัวอย่างข้อมูล</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">2</p><p style="flex:1; font-size:26px; line-height:1.4"><b>คอลัมน์ของระบบ</b> ระบบเดาให้แล้ว ตรวจว่าถูกไหม คอลัมน์ที่ไม่ใช้เลือก "— ไม่ใช้ —"</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">3</p><p style="flex:1; font-size:26px; line-height:1.4"><b>บาร์โค้ด</b> จับคู่ให้เอง ร้านที่ใช้บาร์โค้ดเป็นรหัสสินค้า ส่งคอลัมน์เดียวก็ได้</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">4</p><p style="flex:1; font-size:26px; line-height:1.4"><b>ต้องมี (*)</b> คอลัมน์ที่ต้องจับคู่ให้ครบ ที่เหลือระบบคำนวณให้</p></div>
+<div style="display:flex; gap:16px"><p style="width:44px; height:44px; flex:none; background:#C2410C; color:#FFF8F1; border-radius:50%; font-size:24px; font-weight:700; line-height:44px; text-align:center">5</p><p style="flex:1; font-size:26px; line-height:1.4"><b>บันทึกและตรวจคุณภาพ</b> จับคู่ไม่ครบระบบจะบอก แก้แล้วกดใหม่ได้ ไม่ต้องอัปโหลดซ้ำ</p></div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">17 · ทำซ้ำให้ครบ 4 ไฟล์ ตรวจชื่อหมวดของร้านที่ด้านบนของแท็บ แล้วกด "ใช้ข้อมูลจริง"</p>
+
+</section>
+</div>
+<div class="frame"><section id="routine" data-transition="fade" style="background:#E6EAE7; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">งานประจำ</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">ใครทำอะไร เมื่อไหร่</h2>
+<div style="height:24px"></div>
+<table style="font-size:26px; color:#17252E">
+<tr><th style="width:22%">เมื่อไหร่</th><th style="width:20%">ใคร</th><th style="width:58%">ทำอะไร</th></tr>
+<tr><td>ทุกเช้า</td><td>ผู้ดูแลข้อมูล</td><td>นำเข้าไฟล์ยอดขายและสต็อกถึงเมื่อวาน ดูว่าไม่มี ERROR</td></tr>
+<tr><td>ทุกเช้า</td><td>ผู้จัดการสาขา</td><td>แท็บ New SKU กดยืนยัน / แก้จำนวน / ไม่สั่ง ให้ครบทุกการ์ด ดูหมวดที่ห้ามขาด</td></tr>
+<tr><td>ของใหม่มาถึงร้าน</td><td>ผู้จัดการสาขา</td><td>สแกนบาร์โค้ดหาการ์ด วางตามจุดที่แนะนำ</td></tr>
+<tr><td>ก่อนปล่อยสินค้าใหม่</td><td>ส่วนกลาง</td><td>แท็บลองสินค้าใหม่ ดูว่าควรส่งสาขาไหน กี่ชิ้น</td></tr>
+<tr><td>ทุกสัปดาห์</td><td>ผู้ดูแลข้อมูล</td><td>กดปรับคะแนนตอนนี้ ดูสาขาที่คาดยอดผิดบ่อย</td></tr>
+<tr><td>ช่วง shadow 2 สัปดาห์</td><td>ผู้ดูแลข้อมูล</td><td>ร้านสั่งแบบเดิม ดูผล Shadow mode ทุกสัปดาห์ ดาวน์โหลดบันทึกส่งทีม</td></tr>
+</table>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">18 · สำรองข้อมูล: คัดลอกโฟลเดอร์ data\real และ data\outputs เก็บไว้เป็นระยะ</p>
+
+</section>
+</div>
+<div class="frame"><section id="faq" data-transition="fade" style="background:#E6EAE7; color:#17252E; font-family:'IBM Plex Sans Thai', Tahoma, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:12px">
+<p style="font-size:26px; font-weight:600; color:#1F6FD1; letter-spacing:2px">แก้ปัญหา</p>
+<h2 style="font-family:'Anuphan', Tahoma, sans-serif; font-size:56px; font-weight:600; line-height:1.15">เจอแบบนี้ ทำอย่างไร</h2>
+<div style="height:16px"></div>
+<table style="font-size:24px; color:#17252E">
+<tr><th style="width:38%">เจออะไร</th><th style="width:62%">ทำอย่างไร</th></tr>
+<tr><td>ขึ้น "กำลังเตรียมคำแนะนำ…" นาน</td><td>ครั้งแรกหลังเปิดแอปใช้เวลาประมาณ 1 นาที รอได้เลย ครั้งต่อไปเร็วขึ้น</td></tr>
+<tr><td>เบราว์เซอร์ไม่เปิดเอง</td><td>พิมพ์ http://127.0.0.1:8000 เอง และเปิดหน้าต่างสีดำทิ้งไว้</td></tr>
+<tr><td>สแกนแล้ว "หลักสุดท้ายไม่ตรง"</td><td>สแกนใหม่ หรือพิมพ์ตามตัวเลขใต้แท่งบาร์โค้ด</td></tr>
+<tr><td>สแกนแล้ว "ไม่พบบาร์โค้ด"</td><td>สินค้ายังไม่อยู่ในไฟล์สินค้า กดลองกรอกเป็นสินค้าใหม่ หรือนำเข้าไฟล์สินค้าล่าสุด</td></tr>
+<tr><td>กดตัดสินใจผิด</td><td>กด "เปลี่ยน" บนการ์ด แล้วเลือกใหม่ ระบบใช้ครั้งล่าสุด</td></tr>
+<tr><td>ปุ่ม "ใช้ข้อมูลจริง" กดไม่ได้</td><td>ยังขาดไฟล์หรือมี ERROR ดูรายการ ✕ ด้านบนของแท็บนำเข้า</td></tr>
+<tr><td>ตัวเลขดูแปลก</td><td>ดูป้ายบนหัวแอปว่าเป็นข้อมูลจำลองหรือข้อมูลจริง และวันที่ของข้อมูล</td></tr>
+</table>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6A767D">19 · รายละเอียดเพิ่มเติมอยู่ในคู่มือการใช้งาน (ไฟล์ 03)</p>
+
+</section>
+</div>
+</main>
+<footer>ภาพทุกหน้ามาจากแอปจริงที่ใช้ข้อมูลจำลอง 15 สาขา ตัวเลขไม่ใช่ยอดขายจริง · เลื่อนลงหรือกดลูกศรซ้าย/ขวาเพื่อเปลี่ยนหน้า · <a href="../">เปิดเดโม</a></footer>
+<script>
+const frames = [...document.querySelectorAll(".frame")];
+function fit() { for (const f of frames) f.style.setProperty("--s", f.clientWidth / 1920); }
+addEventListener("resize", fit); fit();
+// ลูกศร/PageUp/PageDown เลื่อนทีละหน้า
+addEventListener("keydown", (e) => {
+  const dir = ["ArrowRight", "ArrowDown", "PageDown", " "].includes(e.key) ? 1 : ["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key) ? -1 : 0;
+  if (!dir) return;
+  e.preventDefault();
+  const y = 70, cur = frames.findIndex((f) => f.getBoundingClientRect().bottom > y + 10);
+  const next = frames[Math.min(frames.length - 1, Math.max(0, (cur < 0 ? 0 : cur) + dir))];
+  next.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+</script>
+</body>
+</html>
